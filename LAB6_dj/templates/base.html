@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAB_6</title>
+    <link href='/static/bootstrap-3.3.5-dist/css/bootstrap.min.css' rel="stylesheet" type="text/css">
+    <link href="/static/bootstrap-3.3.5-dist/css/jumbotron.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+        <p class="navbar-brand" >{% block title %}{% endblock %}</p>
+        </div>
+    </nav>
+    <div class="jumbotron">
+    <div class="container">
+        <h1>{% block head %}{% endblock %}</h1>
+    </div>
+    </div>
+    <div class="container">
+        {% block body %}{% endblock %}
+    </div>
+</body>
+</html>
+
+

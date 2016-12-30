@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+{% block visibletitle %}Услуги{% endblock %}
+{% block head %}Услуги клининговой компании{% endblock %}
+{% block body %}
+    <table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Цена услуги (в рублях)</th>
+        <th>Услуга</th>
+        <th>Класс цены</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for el in services %}
+        <tr><td>{{ el.service_price }}</td><td>{{ el.service_type }}</td><td>{{ el.service_class_of_price }}</td></tr>
+    {% empty %}
+        <tr><td colspan="4" align="center">Услуг нет</td></tr>
+    {% endfor %}
+    </tbody>
+    </table>
+{% endblock %}
